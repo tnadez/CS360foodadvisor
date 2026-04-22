@@ -18,7 +18,7 @@ const Login = ({ global, pageData, preview }) => {
       return;
     }
   })
-  
+
   const Submit = async (e) => {
     e.preventDefault();
 
@@ -32,7 +32,7 @@ const Login = ({ global, pageData, preview }) => {
 
     const data = await res.json();
 
-    if(res.ok) {
+    if (res.ok) {
       localStorage.setItem('token', data.jwt);
       router.push('/profile');
     } else {
@@ -56,13 +56,13 @@ const Login = ({ global, pageData, preview }) => {
             <div className="rounded-md shadow-sm -space-y-px">
               <div className="mb-4">
                 <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                  Email
+                  Emails
                 </label>
-                <input 
-                  type="text" 
-                  placeholder="Enter your email" 
-                  value={identifier} 
-                  onChange={(e) => setIdentifier(e.target.value)} 
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  value={identifier}
+                  onChange={(e) => setIdentifier(e.target.value)}
                   className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                 />
               </div>
@@ -70,25 +70,25 @@ const Login = ({ global, pageData, preview }) => {
                 <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
                   Password
                 </label>
-                <input 
-                  type="password" 
-                  placeholder="Enter your password" 
-                  value={password} 
-                  onChange={(e) => setPassword(e.target.value)} 
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                 />
               </div>
             </div>
 
             <div className="flex items-center justify-between space-x-4">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               >
                 Login
               </button>
               <Link href="/register">
-                <a 
+                <a
                   className="w-full text-center bg-white text-gray-800 py-2 px-4 rounded-md border border-gray-300 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                 >
                   Register
