@@ -3,7 +3,7 @@ services:
   backend:
     build:
       context: ./api
-    image: tnadez/thanadech:latest
+    image: tnadez/backend_image:latest
     container_name: backend
     ports:
       - "1337:1337"
@@ -17,7 +17,7 @@ services:
   frontend:
     build:
       context: ./client
-    image: tnadez/thanadech:latest
+    image: tnadez/frontend_image:latest
     container_name: frontend
     ports:
       - "3000:3000"
